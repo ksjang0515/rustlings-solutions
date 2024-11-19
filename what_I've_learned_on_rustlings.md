@@ -32,3 +32,21 @@ Reference
 Reference
 
 - [Keyword ref (Rust Doc)](https://doc.rust-lang.org/std/keyword.ref.html)
+
+## Box Polymorphic `dyn ???`
+
+## What each `<T>` mean in `impl<T> Wrapper<T>`
+
+First `<T>` after `impl` implies type `T` will be used for the following block.
+
+`<T>` after `Wrapper` implies we are implementing for type `<T>`.
+
+```Rust
+impl<T> Wrapper<T> {
+  fn new(value:T) -> Self {}
+}
+
+impl Wrapper<i32> {
+  fn new(value:i32) -> Self {}
+}
+```
